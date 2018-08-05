@@ -91,8 +91,8 @@ class BuildEnviron:
         return cls(
             system=platform.system(),
             root_dir=os.path.normpath(os.path.join(os.path.dirname(__file__), "..")),
-            travis_tag = "v4.0.4.1",
-            travis_branch = "v4.0.4.1",
+            travis_tag = "v4.0.4.2",
+            travis_branch = "v4.0.4.2",
             travis_pull_request=os.environ.get("TRAVIS_PULL_REQUEST"),
             appveyor_repo_tag_name=os.environ.get("APPVEYOR_REPO_TAG_NAME", ""),
             appveyor_repo_branch=os.environ.get("APPVEYOR_REPO_BRANCH", ""),
