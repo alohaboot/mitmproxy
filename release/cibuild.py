@@ -498,6 +498,13 @@ def upload():  # pragma: no cover
     """
     be = BuildEnviron.from_env()
 
+    # Dropbox
+    subprocess.check_call([
+        "./dropbox_uploader.sh", "upload",
+         be.dist_dir,
+         be.upload_dir,
+    ])
+
     if be.is_pull_request:
         click.echo("Refusing to upload artifacts from a pull request!")
         return
